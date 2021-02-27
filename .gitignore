@@ -1,4 +1,7 @@
 .venv
 .idea
+node_modules
+tailwind-output.css
+tailwind-dev.css
 __pycache__
 *sqlite3
