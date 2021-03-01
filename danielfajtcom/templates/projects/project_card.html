@@ -1,0 +1,28 @@
+{% load static %}
+
+<a href="{{ project.slug }}" class="flex flex-wrap flex-1 space-y-4 justify-center items-center sm:space-y-0 sm:space-x-4">
+
+    <div class="flex flex-col justify-evenly m-4 items-center rounded shadow-md overflow-hidden text-gray-800 hover:border-gray-800 border-gray-400 border-2 cursor-pointer w-80 h-80">
+        {# THUMBNAIL #}
+        <div class="flex w-full justify-center p-2">
+            <img class="rounded-md border-2 w-64 h-32" src="{% static "images/projects/"|add:project.thumbnail %}"
+                 alt="{{ project.name }}">
+        </div>
+        {# DESCRIPTION #}
+        <div class="flex w-full h-full text-center justify-center items-center bg-gray-200 overflow-hidden p-2 w-1/2 ">
+            {{ project.description }}
+        </div>
+        {# TAGS #}
+        <div class="bg-gray-300 w-full flex flex-wrap justify-center space-x-2">
+            {% for tag in project.stack %}
+                <p>
+                    {{ tag }}
+                {% if not forloop.last %}
+                    •
+                {% endif %}
+                </p>
+            {% endfor %}
+        </div>
+    </div>
+
+</a>

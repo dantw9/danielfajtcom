@@ -1,0 +1,47 @@
+{# This component takes src urls of images, creates flex and provides #}
+{# zoom in/out on current viewport. It uses static/js/app.js #}
+
+
+<style>
+    .project-thumb-img {
+        width: 15rem;
+        height: 15rem;
+        display: block;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .project-big-picture {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .prdel > img {
+        width: auto;
+        height: auto;
+        max-width: 80%;
+        max-height: 80%;
+        overflow: hidden;
+    }
+</style>
+
+<div class="flex flex-wrap gap-5">
+    {% for photo in photos %}
+        <div id="project-image-container">
+            <img src="{{ photo }}" alt="gallery photo" class="project-thumb-img">
+        </div>
+    {% empty %}
+        <p>No Photos</p>
+    {% endfor %}
+</div>
