@@ -1,5 +1,6 @@
 .venv
 .idea
+env.py
 node_modules
 tailwind-output.css
 tailwind-dev.css

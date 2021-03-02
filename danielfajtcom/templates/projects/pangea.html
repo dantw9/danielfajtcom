@@ -5,30 +5,32 @@
     {% include 'base/subbar.html' with title="Pangea" %}
     <div class="flex flex-col justify-center items-center w-full">
         {# 1th BLOCK #}
-        <div class="flex flex-col justify-evenly items-center w-full bg-gray-200 md:flex-row">
+        <div class="flex flex-col justify-evenly items-center w-full bg-gray-300 md:flex-row">
             <div class="p-8">
                 <img class="w-96" src="{% static 'images/projects/pangea_discovery.png' %}"
                      alt="Pangea network discovery">
             </div>
             <div>
-                <ul class="text-2xl space-y-4 p-8">
+                <ul class="text-2xl space-y-4 p-8 ">
                     <li>ISP network discovery</li>
                     <li>Scan over 800.000 host IP addresses in less then 7 hours</li>
                     <li>Python multiprocessing library using 16 cores server</li>
+                    <li>Multi-session solution > Users can run Discovery in parallel</li>
                     <li>Identify device, determine communication driver</li>
                     <li>Gather metadata, download configurations</li>
                 </ul>
             </div>
         </div>
-        {# 2th BLOCK #}
+        {# 2nd BLOCK #}
         <div class="flex flex-col justify-evenly items-center w-full bg-gray-800 text-gray-300 md:flex-row">
             <div>
                 <ul class="text-2xl space-y-4 p-8">
-                    <li>ISP network discovery</li>
-                    <li>Scan over 800.000 host IP addresses in less then 7 hours</li>
-                    <li>Python multiprocessing library using 16 cores server</li>
-                    <li>Identify device, determine communication driver</li>
-                    <li>Gather metadata, download configurations</li>
+                    <li>Integration with internal systems</li>
+                    <li>Pair discovery data with customers and services</li>
+                    <li>Handle IP discovery targets automatically according to IPAM</li>
+                    <li>Identify devices, determine communication driver</li>
+                    <li>Data parsing....a lot</li>
+                    <li>Error evaulation, reports</li>
                 </ul>
             </div>
             <div class="p-8">
@@ -36,7 +38,38 @@
                      alt="Pangea network discovery">
             </div>
         </div>
-
+        {# 3rd BLOCK #}
+        <div class="flex flex-col justify-evenly items-center w-full bg-gray-300 md:flex-row">
+            <div class="p-8">
+                <img class="w-96" src="{% static 'images/projects/pangea_flask_api.png' %}"
+                     alt="Pangea network discovery">
+            </div>
+            <div>
+                <ul class="text-2xl space-y-4 p-8">
+                    <li>FLASK API</li>
+                    <li>Run subnet specific network discovery</li>
+                    <li>Access data with search and filters</li>
+                    <li>Downloaded configurations lookup</li>
+                    <li>Access reports</li>
+                </ul>
+            </div>
+        </div>
+        {# 4th BLOCK #}
+        <div class="flex flex-col justify-evenly items-center w-full bg-gray-800 text-gray-300 md:flex-row">
+            <div>
+                <ul class="text-2xl space-y-4 p-8">
+                    <li>Data provisioning to other systems</li>
+                    <li>Pangea was build to maintain "no human involved" network data</li>
+                    <li>The goal was to have as much as possible 100% clean, valid data</li>
+                    <li>Automation of service delivery, deployment, monitoring</li>
+                    <li>Device and service diagnostic capability</li>
+                </ul>
+            </div>
+            <div class="p-8">
+                <img class="w-96" src="{% static 'images/projects/pangea_monitoring.png' %}"
+                     alt="Pangea network discovery">
+            </div>
+        </div>
     </div>
 
 {% endblock %}
