@@ -1,23 +1,40 @@
 {% extends 'base/base.html' %}
+{% load static %}
 
 {% block content %}
     {% include 'base/subbar.html' with title="Pangea" %}
-    {# LEFT-RIGHT LAYOUNT CONTENT #}
-    <div class="flex justify-center items-center">
-        {# PROJECT DESCRIPTION #}
-        <div class="w-3/5">
-            Pangea is a name of my project created for an internet service provider company - Vodafone. Its main
-            purpose, among others, was to create a network inventory system as errorless as possible (meaning “clean”
-            data with no errors). It meant to build a tool capable to provide IP network discovery for more than 800.000
-            host IP addresses in a meaningful time in a multi-vendor (router/switches manufacturers or mediagateways)
-            environment. In less then five hours (thanks to asynchronous multiprocessing) it targeted, identified, and
-            gathered device’s meta data from whole network. It could have captured unsupported devices as well and save
-            only partial dataset for further processing. Biggest issue was data evaluation and parsing. Network
-            discovery was a key feature, which was crucial for further automation development.
+    <div class="flex flex-col justify-center items-center w-full">
+        {# 1th BLOCK #}
+        <div class="flex flex-col justify-evenly items-center w-full bg-gray-200 md:flex-row">
+            <div class="p-8">
+                <img class="w-96" src="{% static 'images/projects/pangea_discovery.png' %}"
+                     alt="Pangea network discovery">
+            </div>
+            <div>
+                <ul class="text-2xl space-y-4 p-8">
+                    <li>ISP network discovery</li>
+                    <li>Scan over 800.000 host IP addresses in less then 7 hours</li>
+                    <li>Python multiprocessing library using 16 cores server</li>
+                    <li>Identify device, determine communication driver</li>
+                    <li>Gather metadata, download configurations</li>
+                </ul>
+            </div>
         </div>
-        {# PHOTOS #}
-        <div class="p-8">
-            {% include 'base/photo_flex.html' with photos=photos %}
+        {# 2th BLOCK #}
+        <div class="flex flex-col justify-evenly items-center w-full bg-gray-800 text-gray-300 md:flex-row">
+            <div>
+                <ul class="text-2xl space-y-4 p-8">
+                    <li>ISP network discovery</li>
+                    <li>Scan over 800.000 host IP addresses in less then 7 hours</li>
+                    <li>Python multiprocessing library using 16 cores server</li>
+                    <li>Identify device, determine communication driver</li>
+                    <li>Gather metadata, download configurations</li>
+                </ul>
+            </div>
+            <div class="p-8">
+                <img class="w-96" src="{% static 'images/projects/pangea_pair_and_sync.png' %}"
+                     alt="Pangea network discovery">
+            </div>
         </div>
 
     </div>

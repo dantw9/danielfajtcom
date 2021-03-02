@@ -1,7 +1,7 @@
 {% load static %}
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="flex justify-center ">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,18 +10,17 @@
     <title>danielfajt.com</title>
 
     {# TAILWIND CSS #}
-     <link rel="stylesheet" href="{% static "css/tailwind-dev.css" %}">
-
-
-
+    <link rel="stylesheet" href="{% static "css/tailwind-dev.css" %}">
 </head>
-<body class="bg-gray-100">
 
-{% include 'base/navbar.html' %}
+<body class="bg-gray-100 w-full max-w-screen-2xl shadow-2xl">
+<div class="h-screen">
+    {% include 'base/navbar.html' %}
 
-{% block content %}
-{% endblock %}
-
+    {% block content %}
+    {% endblock %}
+</div>
 <script type="text/javascript" src="{% static "js/app.js" %}"></script>
 </body>
+
 </html>
