@@ -1,17 +1,18 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
-    <div class="flex flex-col justify-center items-center ">
-        {# TITLE #}
-        {% include 'base/subbar.html' with title='Projects' %}
-        {# PROJECTS FLEX #}
-        <div class="flex flex-col flex-wrap justify-center items-center mt-8 sm:flex-row">
-            {% for project in projects %}
-                {% include 'projects/project_card.html' with project=project %}
-            {% empty %}
-                <h1>I've definitely did some, but who knows why they're not loading from database</h1>
-            {% endfor %}
-        </div>
 
+    {# SUBBAR #}
+    {% include 'base/subbar.html' with title='Projects' %}
+
+    {# PROJECTS FLEX #}
+    <div class="flex flex-col flex-wrap justify-center items-center sm:flex-row ">
+        {% for project in projects %}
+            {% include 'projects/project_card.html' with project=project %}
+        {% empty %}
+            <h1>I've definitely did some, but who knows why they're not loading from database</h1>
+        {% endfor %}
     </div>
+
+
 {% endblock %}

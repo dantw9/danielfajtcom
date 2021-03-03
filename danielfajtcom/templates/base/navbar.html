@@ -1,4 +1,4 @@
-<div class=" bg-gray-800 h-16 shadow-md border-b-2 border-yellow-600">
+<div class=" bg-gray-800 h-16 shadow-md border-b-2 border-yellow-600 fixed w-full z-50">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
         <div class=" flex items-center h-16 ">
             {# LOGO #}
@@ -38,7 +38,7 @@
         </div>
     </div>
     {# BURGER MENU ITEMS - MANAGED BY STATIC/APP.JS #}
-    <div class="hidden bg-gray-800" id="burger-items">
+    <div class="hidden bg-gray-800 z-50 absolute w-full opacity-95" id="burger-items">
         <div class="flex flex-col justify-center items-center px-2 pt-2 pb-3 space-y-1">
                 <a href="{% url 'main:index' %}"
                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">HOME</a>

@@ -1,5 +1,19 @@
 {% extends 'base/base.html' %}
+{% load static %}
 
 {% block content %}
-OLAB
+    {% include 'base/subbar.html' with title="O'Donoghue Lab website" %}
+    <div class="flex flex-col justify-center items-center w-full ">
+
+        <div>
+            <img class="md:opacity-90 md:hover:opacity-80" src="{% static 'images/projects/olab_firefox.png' %}"
+                 alt="O'Donoghue Lab">
+        </div>
+
+        <div class=" flex flex-col gap-4 text-white bg-gray-800 border-yellow-600 border-4 p-12 z-10 absolute w-80 rounded-md text-center">
+            <a class="hover:text-yellow-600" href="https://olab.vercel.app" target="_blank">olab.vercel.app</a>
+            <a class="hover:text-yellow-600" href="https://github.com/dantw9/olab" target="_blank">github.com/dantw9/olab</a>
+        </div>
+
+    </div>
 {% endblock %}

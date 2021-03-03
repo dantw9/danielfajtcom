@@ -1,7 +1,7 @@
 {% load static %}
 
 <!doctype html>
-<html lang="en" class="flex justify-center ">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -13,14 +13,23 @@
     <link rel="stylesheet" href="{% static "css/tailwind-dev.css" %}">
 </head>
 
-<body class="bg-gray-100 w-full max-w-screen-2xl 2xl:shadow-2xl">
-<div>
+<body>
+    {# FIXED NAVBAR #}
     {% include 'base/navbar.html' %}
-
-    {% block content %}
-    {% endblock %}
-</div>
-<script type="text/javascript" src="{% static "js/app.js" %}"></script>
+    <div class="bg-gray-100 w-full">
+        {# EMPTY DIV - UNDERLAYING SPACE OF FIXED NAVBAR #}
+        <div class="h-16"></div>
+        {# CONTENT #}
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+        {# FOOTER #}
+        <div class="w-full">
+            {% include 'base/footer.html' %}
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static "js/app.js" %}"></script>
 </body>
 
 </html>
