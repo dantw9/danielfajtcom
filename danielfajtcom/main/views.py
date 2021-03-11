@@ -34,7 +34,6 @@ def index(request):
 
     try:
         bg_of_the_day = models.DailyBackgroundModel.objects.filter(created_at__day=datetime.utcnow().day)[:1].get()
-        print('quote from DB: ', quote_of_the_day)
     except bg_of_the_day.DoesNotExist:
         bg_of_the_day = requests.get('https://picsum.photos/1200/800.jpg', stream=True)
         bg_of_the_day_id = bg_of_the_day.headers['Picsum-Id']

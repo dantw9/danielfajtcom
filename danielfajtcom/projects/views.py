@@ -3,6 +3,8 @@ from django.views.generic import ListView
 from django.http import Http404
 from django.template import TemplateDoesNotExist
 from . import models
+from main import models as main_models
+from datetime import datetime
 
 
 class Index(ListView):
@@ -12,16 +14,7 @@ class Index(ListView):
 
 
 def project_page(request, project_slug):
-    photos = [
-        'https://picsum.photos/1600/1800?random=1',
-        'https://picsum.photos/200/300?random=2',
-        'https://picsum.photos/200/300?random=3',
-        'https://picsum.photos/200/300?random=4',
-        'https://picsum.photos/200/300?random=5',
-        '/static/images/projects.olab.png'
-    ]
-
-    context = {'photos': photos}
+    context = {}
 
     try:
         template_name = 'projects/' + project_slug + '.html'
