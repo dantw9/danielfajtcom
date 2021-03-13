@@ -8,8 +8,12 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 """
 
 import os
-
+import sys
+import env
 from django.core.wsgi import get_wsgi_application
+
+if env.PROJECT_PATH not in sys.path:
+    sys.path.insert(0, '/opt/bitnami/projects/danielfajtcom')
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'danielfajtcom.settings')
 

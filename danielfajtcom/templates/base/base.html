@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,9 +17,8 @@
     <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
     {# TAILWIND CSS #}
-    <link rel="stylesheet" href="{% static "css/tailwind-dev.css" %}">
+    <link rel="stylesheet" href="{% static "css/"|add:tailwind_file %}">
 </head>
 
 <body class="bg-gray-300 w-full h-full">
@@ -28,7 +28,6 @@
 </nav>
 
 <div class="flex flex-col h-screen">
-
     {# EMPTY DIV - UNDERLAYING SPACE OF FIXED NAVBAR #}
     {# It has to be DIV in DIV like this. Otherwise, because body is FLEX, the h-16 is ignored here #}
     <div>
@@ -43,7 +42,6 @@
     <footer>
         {% include 'base/footer.html' %}
     </footer>
-
 </div>
 
 <script type="text/javascript" src="{% static "js/app.js" %}"></script>

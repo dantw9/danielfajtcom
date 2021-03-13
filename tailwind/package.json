@@ -4,7 +4,8 @@
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.0.3"
   },
-    "scripts": {
-    "build": "postcss ../danielfajtcom/static/css/tailwind.css -o ../danielfajtcom/static/css/tailwind-dev.css -u tailwindcss autoprefixer"
+  "scripts": {
+    "build": "postcss ../danielfajtcom/static/css/tailwind.css -o ../danielfajtcom/static/css/tailwind-production.css -u tailwindcss autoprefixer",
+    "dev": "postcss ../danielfajtcom/static/css/tailwind.css -o ../danielfajtcom/static/css/tailwind-dev.css -u tailwindcss autoprefixer"
   }
 }
