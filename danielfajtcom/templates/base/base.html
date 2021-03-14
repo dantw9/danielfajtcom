@@ -18,7 +18,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     {# TAILWIND CSS #}
-    <link rel="stylesheet" href="{% static "css/"|add:tailwind_file %}">
+    {% if current_env == 'development' %}
+        <link rel="stylesheet" href="{% static "css/tailwind-dev.css" %}">
+        {% elif current_env == 'production' %}
+        <link rel="stylesheet" href="{% static "css/tailwind-production.css" %}">
+    {% endif %}
+
 </head>
 
 <body class="bg-gray-300 w-full h-full">
