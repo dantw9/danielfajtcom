@@ -13,7 +13,7 @@ function NavBurger() {
 }
 NavBurger()
 
-// Projects APP photo gallery - zoom image on click
+// Projects APP photo gallery - zoom image on click - TODO review
 document.addEventListener("click", function (event) {
     // Check to see if the clicked element is a thumbnail
     if (event.target.classList.contains("project-thumb-img" )) {

@@ -1,23 +1,23 @@
 from django.shortcuts import render
-from django.views.generic import ListView
 from django.http import Http404
 from django.template import TemplateDoesNotExist
-from . import models
-from main import models as main_models
-from datetime import datetime
+import os
+import json
 
 
-class Index(ListView):
-    model = models.ProjectModel
-    template_name = 'projects/index.html'
-    context_object_name = 'projects'
+def index(request):
+    # Read projects data from json file
+    with open(os.path.join(os.path.dirname(__file__), "projects.json"), 'r', encoding='utf-8') as f:
+        projects = json.load(f)
+
+    context = {'projects': projects}
+    return render(request, 'projects/index.html', context)
 
 
 def project_page(request, project_slug):
-    context = {}
-
     try:
         template_name = 'projects/' + project_slug + '.html'
-        return render(request, template_name, context)
+        print('template_name', template_name)
+        return render(request, template_name)
     except TemplateDoesNotExist:
         raise Http404(f'Project "{project_slug}" not found')

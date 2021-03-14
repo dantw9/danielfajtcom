@@ -1,0 +1,19 @@
+{% load static %}
+
+<a href="{% url 'main:index' %}"
+   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">HOME</a>
+
+<a href="{% url 'projects:index' %}"
+   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">PROJECTS</a>
+
+<a href="https://dev.to/danielfajt" target="_blank"
+   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium inline-flex">
+    <span>DEV.to</span>
+    <img src="{% static "icons/new_window_light.png" %}" alt="new window icon" class="w-4 h-4 inline">
+</a>
+
+<a href="https://github.com/danielfajt" target="_blank"
+   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium inline-flex">
+    <span>GitHub</span>
+    <img src="{% static "icons/new_window_light.png" %}" alt="new window icon" class="w-4 h-4 inline">
+</a>
