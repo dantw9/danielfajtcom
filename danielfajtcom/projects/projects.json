@@ -4,23 +4,23 @@
     "name": "Pangea",
     "description": "Network discovery and inventory system",
     "stack": ["Python", "Mongo", "Flask", "Multiprocessing"],
-    "thumbnail": "pangea_diagram.jpg",
+    "thumbnail": "thumbnail_pangea.jpg",
     "slug": "pangea"
   },
     {
     "id": "4779d164-132b-477d-bfa5-6dc073cb74ff",
     "name": "Anthony O'Donoghue lab",
-    "description": "Responsive web for Anthony O'Donoghue's lab at UC San Diego",
+    "description": "Anthony O'Donoghue's lab at UC San Diego",
     "stack": ["JS", "TS", "NextJS", "SASS"],
-    "thumbnail": "olab.jpg",
+    "thumbnail": "thumbnail_olab.jpg",
     "slug": "olab"
   },
   {
     "id": "e36f892a-6531-4c31-9276-c3d0b13179d5",
     "name": "U Bílého koníka",
-    "description": "Web presentation for guest house U Bileho Konika",
+    "description": "Web presentation for a guest house",
     "stack": ["Django"],
-    "thumbnail": "u_bileho_konika.jpg",
+    "thumbnail": "thumbnail_u_bileho_konika.jpg",
     "slug": "ubilehokonika"
   },
   {
@@ -28,7 +28,7 @@
     "name": "danielfajt.com",
     "description": "My personal website",
     "stack": ["Django", "Tailwind CSS"],
-    "thumbnail": "danielfajtcom.png",
+    "thumbnail": "thumbnail_danielfajtcom.jpg",
     "slug": "danielfajtcom"
   }
 ]
